@@ -27,7 +27,7 @@ public class ToyWriter {
      *
      * @param toy объект типа Toy, информация о котором будет записана в файл
      */
-    public void writeToFile(Toy toy) {
+    public void writeToFile(Toy toy) throws IllegalArgumentException{
         if (toy == null) {
             throw new IllegalArgumentException("Ошибка: передан null объект игрушки.");
         }

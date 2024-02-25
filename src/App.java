@@ -14,7 +14,12 @@ public class App {
         ToyWriter writer = new ToyWriter("result.txt");
         for (int i = 0; i < 10; i++)
         {
-            writer.writeToFile(toyRaffle.getToy());
+            try {
+                writer.writeToFile(toyRaffle.getToy());
+            }
+            catch (IllegalArgumentException e){
+                System.out.println("В лотерее закончились игрушки");
+            }
         }
     }
 }
